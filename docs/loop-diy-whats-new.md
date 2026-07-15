@@ -181,6 +181,12 @@ means faster, more predictable behavior and some concrete improvements Tidepool 
 - **Time since last loop** is shown, so you can tell at a glance how recently Loop ran.
 - **An updated loop-status dialog** appears when you tap the loop-status icon, with clearer
   detail about the current loop state.
+- **A redesigned Insulin Delivery Log** — tapping the Active Insulin chart opens a new log
+  showing the day's total insulin delivery, with a filter to show *all* delivery or just
+  your *user-initiated* doses (hiding automated temp basals). Tap any dose to see its
+  details, including the dosing decision that produced it, and log a manual (non-pump) dose
+  from the same screen. (When no pump is set up, the classic event-history screen is shown
+  instead, since the new log relies on live pump state.)
 
 ### Watch, HUD, and history
 - **Watch** refreshes glucose the moment you raise your wrist / open the app, and backfills
