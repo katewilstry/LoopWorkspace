@@ -27,8 +27,7 @@ DIY-only features on top. The headline user-visible changes:
 - **More devices** — Omnipod, Medtrum, Eversense, and FreeStyle Libre 3 are all
   supported alongside the existing pumps and CGMs.
 - **A smarter forecast and a cleaner algorithm** under the hood.
-- **Apple Watch, HUD, and history improvements**, plus the app is now generically
-  branded instead of "Tidepool Loop."
+- **A redesigned main screen**, plus Apple Watch, HUD, and history improvements.
 
 ---
 
@@ -141,7 +140,8 @@ report has enough data to be meaningful without waiting on slow HealthKit querie
 Device support expanded well beyond the original sync set.
 
 ### Pumps
-- **Omnipod** (DASH and Eros) — now via the consolidated **OmnipodKit** driver.
+- **Omnipod** (Eros, DASH, and **Omnipod 5**) — now via the consolidated **OmnipodKit**
+  driver, which adds Omnipod 5 support.
 - **Medtrum** (Nano / TouchCare) — **new**.
 - **Medtronic (Minimed)** — retained, including DIY's cannula-age / insulin-age tracking.
 
@@ -173,8 +173,16 @@ means faster, more predictable behavior and some concrete improvements Tidepool 
 
 ---
 
-## Apple Watch, HUD, and everyday UI
+## Main screen, Watch, HUD, and everyday UI
 
+### A redesigned main screen
+- **A single insulin delivery chart** replaces the previous two-chart layout (a separate
+  delivery chart and Active Insulin chart), for a cleaner status view.
+- **Time since last loop** is shown, so you can tell at a glance how recently Loop ran.
+- **An updated loop-status dialog** appears when you tap the loop-status icon, with clearer
+  detail about the current loop state.
+
+### Watch, HUD, and history
 - **Watch** refreshes glucose the moment you raise your wrist / open the app, and backfills
   from the latest stored reading.
 - **Manual temp basal** now pauses looping while it runs and is clearly surfaced in the
@@ -182,8 +190,6 @@ means faster, more predictable behavior and some concrete improvements Tidepool 
 - **Longer history** — the app keeps 90 days of glucose locally (up from a shorter window),
   feeding the new Statistics page.
 - **App version** moved into the Settings → Support section.
-- **Generic branding** — user-facing text says the app's own name instead of "Tidepool
-  Loop," and Focus-mode help images were added.
 - **Clearer alert-permission warnings** — instead of one generic "notifications off"
   message, the app tells you specifically which permission (notifications, critical
   alerts, or time-sensitive) is disabled.
