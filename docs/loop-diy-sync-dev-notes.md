@@ -271,7 +271,8 @@ noted; workspace gitlinks bumped on `LoopKit/LoopWorkspace next-dev`.
 ## 8. Testing checklist (consolidated)
 
 ### Algorithm & dosing
-- [ ] Glucose predictions; ISF during carb absorption; max-IOB multiplier (2×).
+- [ ] Glucose predictions; mid-absorption ISF (dose effect follows the ISF *timeline* as
+      insulin absorbs, not a single ISF fixed at dose time); max-IOB multiplier (2×).
 - [ ] `TempBasalRecommendation.direction` populated.
 - [ ] Display forecast projects ongoing suspends / manual temp basals.
 - [ ] Pump decision IDs on OmnipodKit / MinimedKit dose entries.
