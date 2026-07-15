@@ -167,7 +167,15 @@ means faster, more predictable behavior and some concrete improvements Tidepool 
   absorption instead of jumping to full effect.
 - **Selectable carb-absorption model** (parabolic / linear / piecewise-linear).
 - **A max-active-insulin cap** expressed as a multiple of your max bolus (default 2×).
-- **More accurate corrections during carb absorption** (ISF fix).
+- **More accurate corrections during carb absorption** — the algorithm now applies the
+  correct insulin sensitivity (ISF) value while carbs are still absorbing, instead of an
+  ISF that could be off during that window.
+- **A "gradual transitions" guard against noisy CGM data** — if your glucose readings jump
+  sharply from one reading to the next (more than ~40 mg/dL between consecutive readings),
+  the algorithm skips **glucose momentum and retrospective correction** for that cycle.
+  Those two effects extrapolate your recent short-term trend, so on a big jump — a sensor
+  glitch, a compression low, or a one-off spike — they'd amplify the noise instead of
+  reflecting a real trend. Skipping them keeps dosing steadier through jumpy data.
 - **The display forecast now projects ongoing suspends and manual temp basals**, so the
   prediction curve reflects what the pump is actually doing.
 
